@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock AI Skills - Samayo Creative Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+      <!-- 🔥 Google Analytics v4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', YOUR_MEASUREMENT_ID);
+    </script>
+      
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #161616;
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --accent-red: #ff4d4d;
+            --accent-blue: #29b6f6;
+            --accent-green: #00e676;
+            --border-color: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header --- */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        /* --- Main Content Container --- */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            flex: 1; /* Pushes footer down */
+        }
+
+        /* --- Hero Section --- */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 77, 77, 0.15);
+            color: #ffaaaa;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 77, 77, 0.2);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        h1 .highlight {
+            color: var(--accent-red);
+            display: block; /* Forces new line for mobile look */
+        }
+
+        .subtext {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* --- Card Styles --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card-title {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .card-question {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            transition: transform 0.2s ease, opacity 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .btn-blue {
+            background: linear-gradient(90deg, #2ca4d8, #29b6f6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(41, 182, 246, 0.3);
+        }
+
+        .btn-green {
+            background: linear-gradient(90deg, #00c853, #00e676);
+            color: #003300;
+            box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
+        }
+
+        .note {
+            font-size: 0.75rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* --- Feature List --- */
+        .feature-list {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .icon-download { background: rgba(41, 182, 246, 0.1); color: var(--accent-blue); }
+        .icon-bulb { background: rgba(156, 39, 176, 0.1); color: #ab47bc; }
+        .icon-play { background: rgba(0, 230, 118, 0.1); color: var(--accent-green); }
+
+        .feature-text h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: #eee;
+        }
+
+        .feature-text p {
+            font-size: 0.8rem;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            background-color: #0a0a0a;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.75rem;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            color: #444;
+            font-size: 0.65rem;
+            line-height: 1.5;
+        }
+
+        /* --- Desktop Tweaks --- */
+        @media (min-width: 768px) {
+            h1 .highlight {
+                display: inline; /* Inline on desktop */
+            }
+            .container {
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SAM<span>AYO</span></div>
+    </header>
+
+    <main class="container">
+        <div class="badge">
+            <i class="far fa-clock"></i> OFFER ENDS SOON
+        </div>
+
+        <h1>Unlock Your AI <span class="highlight">Skills For Free!</span></h1>
+        <p class="subtext">
+            Learn how to go viral with Promotions Videos for social media ads...
+        </p>
+
+        <div class="card">
+            <div class="card-title">Quick Question:</div>
+            <div class="card-question">Do you use Telegram?</div>
+
+            <a href="#" class="btn btn-blue" onclick="handleClick('Telegram')">
+                <i class="fab fa-telegram-plane"></i> YES (Join Channel)
+            </a>
+
+            <a href="#" class="btn btn-green" onclick="handleClick('WhatsApp')">
+                <i class="fas fa-phone-alt"></i> NO (Join WhatsApp)
+            </a>
+        </div>
+
+        <p class="note">*Choose your preferred platform to access assets</p>
+
+        <div class="card">
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="icon-box icon-download">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Daily Freebies & Tips</h4>
+                        <p>I drop exclusive assets and wallpapers every single day.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-box icon-bulb">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Paid Class Insights</h4>
+                        <p>Get sneak peeks into my paid masterclasses.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-box icon-play">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Editing Samples</h4>
+                        <p>See real-world examples of my top-tier editing work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="copyright">
+            This site is not a part of the TikTok website or TikTok Inc. Additionally, This site is NOT endorsed by TikTok in any way.<br>
+            © 2024 Samayo Creative Art. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple JS to handle button clicks
+        function handleClick(platform) {
+            console.log("User clicked: " + platform);
+            
+            // Example of redirection logic
+            if(platform === 'Telegram') {
+                alert("Redirecting to Telegram Channel...");
+                window.location.href = "https://t.me/SamayoCreatives";
+            } else {
+                alert("Redirecting to WhatsApp Group...");
+                 window.location.href = "https://whatsapp.com/channel/0029Vaz9SJ2LI8YZhzQdQd3V";
+            }
+        }
+    </script>
+</body>
+</html>
